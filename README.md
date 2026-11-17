@@ -1,5 +1,3 @@
-# mazbout-cafe
-Responsive café landing page with an interactive roast slider and booking ticket
 # Mazbout Coffee: Café Landing Page
 
 A responsive landing page for a specialty café, built with HTML, CSS, JavaScript and Bootstrap 5.
@@ -26,7 +24,7 @@ mazbout-cafe/
 
 ## How to run
 
-1. Unzip the folder.
+1. Download or clone this repository.
 2. Open `index.html` in your browser. No installation or build step is needed.
 3. An internet connection is required to load Bootstrap and the Google Fonts from their CDNs.
 
@@ -46,9 +44,9 @@ When the form is valid, `drawTicket()` in `js/main.js` draws the booking details
 
 The booking is not stored anywhere yet. To make it a real system, send the data to a backend (for example an ASP.NET Core Web API saving to SQL Server) with `fetch()` before showing the ticket.
 
-## Deploy for free
+## Live demo
 
-Upload the folder to GitHub, then enable GitHub Pages in the repository settings. Netlify and Vercel also work by dragging the folder in.
+Available through the website link in the About section of this repository.
 
 ## Notes
 
