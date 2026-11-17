@@ -1,0 +1,90 @@
+:root{
+  --ink:#17261f; --paper:#e9efe6; --card:#f7faf4;
+  /* These three change when the roast slider moves (see js/main.js) */
+  --roast-bg:#f2c14e; --roast-fg:#17261f; --roast-coffee:#d9983a;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Figtree',sans-serif;background:var(--paper);color:var(--ink);}
+h1,h2,h3,.brand{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ink);outline-offset:3px;}
+section{padding:5.5rem 0;scroll-margin-top:1rem;}
+h2{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;}
+.section-intro{max-width:50ch;margin-bottom:1.5rem;opacity:.8;}
+
+/* Navbar */
+.brand{font-weight:800;font-size:1.5rem;color:var(--roast-fg)!important;}
+.navbar .nav-link{color:var(--roast-fg);font-weight:500;}
+.navbar-toggler{border-color:var(--roast-fg);}
+.btn-ink{background:var(--ink);color:#f7faf4;border:0;border-radius:999px;padding:.7rem 1.5rem;font-weight:600;}
+.btn-ink:hover{background:#0c1712;color:#fff;}
+
+/* Hero */
+.hero{background:var(--roast-bg);color:var(--roast-fg);transition:background .35s,color .35s;min-height:100vh;display:flex;flex-direction:column;}
+.hero-body{flex:1;display:flex;align-items:center;padding-top:2rem;padding-bottom:5rem;}
+.hero h1{font-size:clamp(2.8rem,8vw,6.5rem);font-weight:800;line-height:.95;}
+.hero .lead{max-width:34ch;font-size:1.2rem;}
+.cup-wrap{max-width:380px;margin-inline:auto;}
+.cup-wrap svg{width:100%;height:auto;}
+#coffeeFill{fill:var(--roast-coffee);transition:fill .35s;}
+.steam path{fill:none;stroke:var(--roast-fg);stroke-width:5;stroke-linecap:round;opacity:.5;animation:rise 3.2s ease-in-out infinite;}
+.steam path:nth-child(2){animation-delay:.9s}.steam path:nth-child(3){animation-delay:1.8s}
+@keyframes rise{0%,100%{transform:translateY(6px);opacity:.15}50%{transform:translateY(-8px);opacity:.55}}
+.roast-panel{background:rgba(255,255,255,.22);border-radius:1.25rem;padding:1.5rem;max-width:520px;}
+.roast-panel label{font-weight:600;}
+#roastName{font-family:'Bricolage Grotesque';font-weight:700;font-size:1.8rem;margin:0;}
+#roastNotes{margin:0;min-height:3em;}
+input[type=range]{width:100%;accent-color:var(--roast-fg);height:2rem;}
+.scale{display:flex;justify-content:space-between;font-size:.9rem;font-weight:500;}
+
+/* Marquee strip */
+.marquee{background:var(--ink);color:#f7faf4;overflow:hidden;white-space:nowrap;padding:1rem 0;}
+.marquee-track{display:inline-flex;animation:slide 28s linear infinite;}
+.marquee span{font-family:'Bricolage Grotesque';font-size:1.3rem;font-weight:700;padding:0 2rem;display:inline-flex;align-items:center;gap:4rem;}
+.marquee span::after{content:"";width:.6rem;height:.6rem;border-radius:50%;background:#f2c14e;}
+@keyframes slide{to{transform:translateX(-50%);}}
+
+/* Menu */
+.nav-pills .nav-link{color:var(--ink);border-radius:999px;font-weight:600;}
+.nav-pills .nav-link.active{background:var(--ink);color:#f7faf4;}
+.menu-row{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:2px dotted rgba(23,38,31,.3);}
+.menu-row h3{font-size:1.25rem;margin:0;}
+.menu-row p{margin:0;opacity:.75;}
+.price{font-family:'Bricolage Grotesque';font-weight:700;font-size:1.2rem;white-space:nowrap;}
+
+/* Story */
+#story p{max-width:60ch;font-size:1.1rem;}
+.timeline{border-left:3px solid var(--ink);padding-left:1.75rem;margin:0;}
+.timeline li{position:relative;padding-bottom:2rem;}
+.timeline li::before{content:"";position:absolute;left:calc(-1.75rem - 9px);top:.5rem;width:15px;height:15px;border-radius:50%;background:#f2c14e;border:3px solid var(--ink);}
+.timeline strong{display:block;font-family:'Bricolage Grotesque';font-size:2rem;font-weight:800;line-height:1.1;}
+.about-card{background:var(--card);border-radius:1.5rem;padding:2rem;height:100%;}
+.about-card.dark{background:var(--ink);color:#f7faf4;}
+.about-card h3{font-size:1.5rem;font-weight:700;}
+
+/* Process */
+.step{border-top:3px solid var(--ink);padding-top:1rem;height:100%;}
+.step-n{display:inline-grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--ink);color:#f7faf4;font-weight:700;margin-bottom:.75rem;}
+.step h3{font-size:1.5rem;font-weight:700;}
+
+/* Reviews */
+.review{background:var(--card);border-radius:1.5rem;padding:2rem;height:100%;margin:0;}
+.review blockquote{font-size:1.15rem;margin-bottom:1rem;}
+.review figcaption{font-weight:600;}
+
+/* FAQ */
+.accordion-button:not(.collapsed){background:var(--ink);color:#f7faf4;box-shadow:none;}
+.accordion-button:not(.collapsed)::after{filter:invert(1);}
+.accordion-item{border-color:rgba(23,38,31,.2);background:var(--card);}
+
+/* Booking */
+.visit{background:var(--ink);color:#f7faf4;border-radius:2rem;padding:clamp(1.5rem,5vw,3.5rem);}
+.visit .form-control,.visit .form-select{border-radius:.8rem;padding:.75rem 1rem;}
+.visit .btn-gold{background:#f2c14e;color:var(--ink);font-weight:700;border-radius:999px;padding:.8rem 1.8rem;border:0;}
+.visit .invalid-feedback{color:#ffb4a8;}
+footer{padding:2rem 0 3rem;opacity:.8;}
+
+@media (prefers-reduced-motion:reduce){
+  .steam path,.marquee-track{animation:none}
+  .hero{transition:none}
+  html{scroll-behavior:auto}
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mazbout Coffee: small-batch roasted coffee and fresh pastries in Cairo.">
+<title>Mazbout Coffee | Roasted in small batches</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container">
+      <a class="navbar-brand brand" href="#top">Mazbout</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#story">Our story</a></li>
+          <li class="nav-item"><a class="nav-link" href="#process">How we make it</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="btn btn-ink mt-2 mt-lg-0" href="#visit">Book a table</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container hero-body" id="top">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <h1>Coffee, roasted to your taste.</h1>
+        <p class="lead mt-4">Slide to pick your roast. Everything on this page changes with it, just like your cup does.</p>
+        <div class="roast-panel mt-4">
+          <label for="roast" class="mb-2">Roast level</label>
+          <input type="range" id="roast" min="0" max="100" value="35" aria-describedby="roastNotes">
+          <div class="scale"><span>Light</span><span>Medium</span><span>Dark</span></div>
+          <hr class="my-3">
+          <p id="roastName"></p>
+          <p id="roastNotes" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="cup-wrap" aria-hidden="true">
+          <svg viewBox="0 0 300 300">
+            <g class="steam"><path d="M110 70 q-14 -22 0 -40"/><path d="M150 70 q-14 -22 0 -40"/><path d="M190 70 q-14 -22 0 -40"/></g>
+            <path d="M60 100 h180 v70 a90 90 0 0 1 -90 90 a90 90 0 0 1 -90 -90 z" fill="#f7faf4"/>
+            <ellipse cx="150" cy="100" rx="90" ry="14" fill="#17261f" opacity=".9"/>
+            <ellipse id="coffeeFill" cx="150" cy="100" rx="82" ry="10"/>
+            <path d="M240 120 h20 a30 30 0 0 1 0 60 h-26" fill="none" stroke="#f7faf4" stroke-width="14" stroke-linecap="round"/>
+            <ellipse cx="150" cy="275" rx="120" ry="12" fill="#17261f" opacity=".18"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Single origin</span><span>Roasted weekly</span><span>Fresh pastries</span><span>Open until midnight</span>
+    <span>Single origin</span><span>Roasted weekly</span><span>Fresh pastries</span><span>Open until midnight</span>
+  </div>
+</div>
+
+<main>
+  <!-- MENU -->
+  <section id="menu">
+    <div class="container">
+      <h2>What we pour and bake</h2>
+      <p class="section-intro">Prices in Egyptian pounds. Ask us for oat or almond milk on any drink.</p>
+      <ul class="nav nav-pills gap-2 mb-4" role="tablist" id="menuTabs"></ul>
+      <div class="tab-content col-lg-9" id="menuContent"></div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="pt-0">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-6">
+          <h2>A garage, one machine, and a lot of questions.</h2>
+          <p class="mt-4">Mazbout started in 2016 when two friends, Nour and Karim, bought a second-hand espresso machine and set it up in a garage in Zamalek. They had one rule: if the coffee isn't right, we don't serve it.</p>
+          <p>"Mazbout" means "just right" in Egyptian Arabic. It is how people describe their coffee when the sugar, the strength and the heat all land. That is still the goal every time we pull a shot.</p>
+          <p>Today we roast our own beans, bake every morning, and know most of our regulars by their order.</p>
+        </div>
+        <div class="col-lg-6">
+          <ol class="timeline list-unstyled">
+            <li><strong>2016</strong><span>First machine, first ten customers.</span></li>
+            <li><strong>2019</strong><span>Our own roastery opens in the back of the shop.</span></li>
+            <li><strong>2022</strong><span>We move to the Nile Corniche and add a bakery.</span></li>
+            <li><strong>2025</strong><span>Six single origins bought directly from farms.</span></li>
+          </ol>
+        </div>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4"><div class="about-card dark"><h3>Fresh, always</h3><p class="mb-0">Every bag is roasted within 14 days of reaching your cup. We write the date on it.</p></div></div>
+        <div class="col-md-4"><div class="about-card"><h3>Fair to farmers</h3><p class="mb-0">We pay above market price and visit the farms we buy from every year.</p></div></div>
+        <div class="col-md-4"><div class="about-card"><h3>A table for everyone</h3><p class="mb-0">Work, read, meet, or sit alone. Nobody rushes you and Wi-Fi is free.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="pt-0">
+    <div class="container">
+      <h2 class="mb-4">From bean to cup</h2>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3"><div class="step"><span class="step-n">1</span><h3>Source</h3><p>We choose beans from Ethiopia, Colombia and Brazil, and taste every lot before buying.</p></div></div>
+        <div class="col-sm-6 col-lg-3"><div class="step"><span class="step-n">2</span><h3>Roast</h3><p>Small batches of 5 kg, roasted in our shop so you can smell it from the street.</p></div></div>
+        <div class="col-sm-6 col-lg-3"><div class="step"><span class="step-n">3</span><h3>Brew</h3><p>Water is filtered, weighed and timed. Each drink follows a recipe we have tested.</p></div></div>
+        <div class="col-sm-6 col-lg-3"><div class="step"><span class="step-n">4</span><h3>Serve</h3><p>Your drink goes to your table while it is still at the right temperature.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="pt-0">
+    <div class="container">
+      <h2 class="mb-4">What regulars say</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><figure class="review"><blockquote>The Turkish coffee tastes like my grandmother's, and the date roll is the best in Cairo.</blockquote><figcaption>Salma, Maadi</figcaption></figure></div>
+        <div class="col-md-4"><figure class="review"><blockquote>I work here three days a week. Good Wi-Fi, quiet corners, and the cold brew never disappoints.</blockquote><figcaption>Omar, Dokki</figcaption></figure></div>
+        <div class="col-md-4"><figure class="review"><blockquote>Booking a table was easy and the staff remembered our order the second time we came.</blockquote><figcaption>Heba, Zamalek</figcaption></figure></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="pt-0">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4"><h2>Good to know</h2></div>
+        <div class="col-lg-8">
+          <div class="accordion" id="faqList">
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Do I need to book a table?</button></h3>
+              <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqList"><div class="accordion-body">No, walk-ins are welcome. Booking is recommended on Thursday and Friday evenings.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">Do you have non-dairy milk?</button></h3>
+              <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Yes, oat and almond milk for EGP 15 extra.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Can I buy beans to take home?</button></h3>
+              <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Yes. We sell 250 g and 1 kg bags, and we can grind them for your brewing method.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">How long is my table held?</button></h3>
+              <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">We hold it for 15 minutes after your booking time. Call us if you are running late.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="visit" class="pt-0">
+    <div class="container">
+      <div class="visit">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <h2>Save your seat</h2>
+            <p class="mt-3">Open every day, 8 AM to midnight.<br>12 Nile Corniche, Cairo</p>
+            <p class="mb-0">After booking you get a ticket image to save on your phone.</p>
+          </div>
+          <div class="col-lg-7">
+            <form id="bookForm" class="row g-3" novalidate>
+              <div class="col-sm-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+                <div class="invalid-feedback">Enter your name.</div>
+              </div>
+              <div class="col-sm-6">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" pattern="[0-9+ ]{8,15}" required>
+                <div class="invalid-feedback">Enter a valid phone number.</div>
+              </div>
+              <div class="col-sm-4">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" required>
+                <div class="invalid-feedback">Pick a date.</div>
+              </div>
+              <div class="col-sm-4">
+                <label for="time" class="form-label">Time</label>
+                <input type="time" class="form-control" id="time" min="08:00" max="23:30" required>
+                <div class="invalid-feedback">Pick a time between 8:00 and 23:30.</div>
+              </div>
+              <div class="col-sm-4">
+                <label for="guests" class="form-label">Guests</label>
+                <select id="guests" class="form-select" required>
+                  <option value="" selected disabled>Choose</option>
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+                </select>
+                <div class="invalid-feedback">Select guests.</div>
+              </div>
+              <div class="col-12"><button type="submit" class="btn btn-gold">Book a table</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container d-flex flex-wrap justify-content-between gap-3">
+    <span>Mazbout Coffee, 12 Nile Corniche, Cairo</span>
+    <span>+20 100 000 0000 &nbsp; @mazbout.coffee</span>
+  </div>
+</footer>
+
+<!-- BOOKING CONFIRMATION -->
+<div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header border-0 pb-0">
+        <h2 class="modal-title fs-4" id="ticketTitle">Booking confirmed</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Your table is reserved. Save this ticket and show it when you arrive.</p>
+        <img id="ticketImg" class="img-fluid rounded-4 shadow" alt="Your booking ticket">
+        <p class="small mt-3 mb-0">On a phone, you can also press and hold the image to save it to your photos.</p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center">
+        <a id="ticketDownload" class="btn btn-ink" download="mazbout-booking.png" href="#">Download ticket</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
